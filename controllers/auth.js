@@ -8,7 +8,7 @@ const { error } = require('console')
 
 const transporter=nodemailer.createTransport(sendgridTransport({
   auth:{
-    api_key:'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'
+    api_key:process.env.SENDGRID_API
   }
 }))
 

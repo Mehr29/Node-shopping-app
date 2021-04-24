@@ -1,12 +1,3 @@
-// const {Sequelize} = require('sequelize');
-
-// const sequelize = new Sequelize('node-learning', 'Archer', 'pwdpwd', {
-//   dialect: 'mysql',
-//   host: 'localhost'
-// });
-
-// module.exports = sequelize;
-
 const mongodb=require('mongodb')
 const MongoClient=mongodb.MongoClient
 let _db;
