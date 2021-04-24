@@ -1,5 +1,5 @@
 const path = require('path');
-
+const dotenv=require('dotenv');
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose=require('mongoose')
@@ -8,12 +8,13 @@ const MongoDBStore=require('connect-mongodb-session')(session)
 const csrf=require('csurf')
 const flash=require('connect-flash')
 const multer = require('multer')
-const MONGODB_URI='mongodb+srv://Archer:pwdpwd@cluster0.ntvka.mongodb.net/shop'
+dotenv.config();
+
+const MONGODB_URI=process.env.MONGO_DB;
 
 const store= new MongoDBStore({
   uri:MONGODB_URI,
   collection:'session',
-
 })
 const errorController = require('./controllers/error');
 

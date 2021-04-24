@@ -11,7 +11,7 @@ const mongodb=require('mongodb')
 const MongoClient=mongodb.MongoClient
 let _db;
 const mongoConnect =(cb)=>{
-  MongoClient.connect('mongodb+srv://Archer:pwdpwd@cluster0.ntvka.mongodb.net/shop').then(
+  MongoClient.connect(process.env.MONGO_DB).then(
     result=>{
     console.log("Connected!")
     _db=result.db()
